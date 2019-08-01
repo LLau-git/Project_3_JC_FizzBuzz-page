@@ -1,0 +1,8 @@
+html{
+    /* image from unsplash.com author Paweł Czerwiński */
+    background: center no-repeat url(https://images.unsplash.com/photo-1559762717-99c81ac85459?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(11, 70, 70);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
