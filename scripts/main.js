@@ -1,23 +1,34 @@
-const main = document.getElementById("container");
-
 const btnRef = document.getElementById("btnRefresh"); 
+// const main = document.getElementById("container");
 
 
-//creating container of 100 div
-function fizzBuzz() {
+
+// var myDiv = document.createElement("div");
+// // for(let i=1; i<= 100; i++) 
+// myDiv.innerHTML = "numbers 1";
+// document.getElementById("container").appendChild(myDiv); 
+
+
+function main() {
+
     console.log("Creating container");
-    const fizzBuzz = document.getElementById("container");
-    for(let i=1; i<= 100; i++) {
-        console.log(i);
-    }
 
-//     // for (var i=1; i < 101; i++){
-//     //     if (i % 15 == 0) console.log("FizzBuzz");
-//     //     else if (i % 3 == 0) console.log("Fizz");
-//     //     else if (i % 5 == 0) console.log("Buzz");
-//     //     else console.log(i);
-//     // }  
-//     const output = fizzBuzz();
-//     console.log(output);
-    
-// }
+    const main = document.getElementById('container');
+
+
+    for(let i=1; i<= 100; i++) {
+        const myDiv = document.createElement("div");
+        myDiv.innerText = "Number # "+i;
+        myDiv.id = "myid"+i;
+        // console.log(i);
+        main.appendChild(myDiv);
+        console.log("Create Main");
+    }    
+}
+main();
+     
+        
+
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = "Hello World";
+//   }
