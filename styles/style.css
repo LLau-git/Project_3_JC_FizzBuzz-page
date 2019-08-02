@@ -6,3 +6,53 @@ html{
     color: rgb(11, 70, 70);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+h1{
+    text-align: center;
+    font-size: 5em;
+}
+.cont-menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#container{
+    background: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 0.5em;
+    padding: 1em;
+}
+.myDivs{
+    width: 60px;
+    height: 60px;
+    background: lightyellow;
+    border: 2px solid rgb(229, 248, 118);
+    padding: 0.5em;
+    margin: 0.3em;
+}
+.fizzClass, .buzzClass, .fizzbuzzClass{
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(229, 248, 118);
+    padding: 0.5em;
+    margin: 0.3em;
+    display: flex;
+    /* transform: scale(1.5); */
+    
+}
+
+.fizzClass{
+  background: lightsalmon;  
+}
+
+.buzzClass{
+    background: lightgreen;
+}
+
+.fizzbuzzClass{
+    background: lightcoral;
+}
