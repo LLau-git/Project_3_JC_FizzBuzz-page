@@ -1,9 +1,4 @@
 const btnRef = document.getElementById("btnRefresh"); 
-// const main = document.getElementById("container");
-
-let myDiv = document.createElement("div");
-let myPar = document.createElement("p");
-
 
 
 function main() {
@@ -19,12 +14,7 @@ function main() {
         myDiv.id = "myid"+i;
         myDiv.className = "myDivs";
         myDiv.className += " numbers";
-
-        if (i % 15 == 0){
-            console.log("FizzBuzz");
-            myDiv.innerText += " FizzBuzz";
-            myDiv.className = "fizzbuzzClass"
-            } 
+        
         if (i % 3 == 0) {
             console.log("Fizz");
             myDiv.innerText += " Fizz";
@@ -35,6 +25,12 @@ function main() {
             myDiv.innerText += " Buzz";
             myDiv.className = "buzzClass"
             }
+
+        if (i % 15 == 0){
+            console.log("FizzBuzz");
+            // myDiv.innerText += " FizzBuzz";
+            myDiv.className = "fizzbuzzClass"
+            } 
         
         // console.log(i);
         main.appendChild(myDiv);
@@ -43,9 +39,25 @@ function main() {
 }
 
 main();
+
+/* <button onclick="myFizz()" id="btnFizz">FIZZ</button> */
+
+function myFizz() {
+    let fizz = document.getElementById('container');
+    while (fizz.hasChildNodes()) {
+        fizz.removeChild(fizz.firstChild);
+    }
+
+    function finalFizz() {
+    let finFizz = document.getElementById('container');
+    let fFizz = document.getElementsByClassName('fizzClass');
+    fFizz.appendChild(finFizz);
+    console.log("making Fizz");
+    }
+}
+
+
+
+
     
 
-
-// function myFunction() {
-//     document.getElementById("demo").innerHTML = "Hello World";
-//   }
