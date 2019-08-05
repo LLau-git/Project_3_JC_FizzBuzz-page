@@ -48,14 +48,21 @@ function myFizz() {
         fizz.removeChild(fizz.firstChild);
     }
 
-    function finalFizz() {
-    let finFizz = document.getElementById('container');
-    let fFizz = document.getElementsByClassName('fizzClass');
-    fFizz.appendChild(finFizz);
-    console.log("making Fizz");
-    }
+    // function finalFizz() {
+    // let finFizz = document.getElementById('container');
+    // let fFizz = document.getElementsByClassName('fizzClass');
+    // fFizz.appendChild(finFizz);
+    // console.log("making Fizz");
+    // }
 }
 
+function btnRefresh() {
+    let fizz = document.getElementById('container');
+    while (fizz.hasChildNodes()) {
+        fizz.removeChild(fizz.firstChild);
+}
+main();
+}
 
 
 
