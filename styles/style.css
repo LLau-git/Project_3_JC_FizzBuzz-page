@@ -14,16 +14,16 @@ h1{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
     margin: 0.5em;
     padding: 0.5em;
 }
 
 #container{
-    background: lightblue;
+    /* background: lightblue; */
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
-    /* width: 100%; */
+    width: 100%;
     margin: 0.5em;
     padding: 1em;
 }
@@ -35,7 +35,7 @@ h1{
     padding: 0.5em;
     margin: 0.3em;
 }
-.fizzClass, .buzzClass, .fizzbuzzClass{
+.fizzClass, .buzzClass, .fizzbuzzClass, .otherClass{
     width: 60px;
     height: 60px;
     border: 2px solid rgb(229, 248, 118);
@@ -47,13 +47,16 @@ h1{
 }
 
 .fizzClass{
-  background: lightsalmon;  
+    background: rgb(243, 160, 127);  
 }
 
 .buzzClass{
-    background: lightgreen;
+    background: rgb(149, 216, 247);
 }
 
 .fizzbuzzClass{
-    background: lightcoral;
+    background: rgb(214, 83, 83);
+}
+.otherClass{
+    background: lightgoldenrodyellow;
 }
