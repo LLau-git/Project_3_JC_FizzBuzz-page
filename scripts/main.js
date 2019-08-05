@@ -40,20 +40,22 @@ function main() {
 
 main();
 
-/* <button onclick="myFizz()" id="btnFizz">FIZZ</button> */
 
 function myFizz() {
-    let fizz = document.getElementById('container');
-    while (fizz.hasChildNodes()) {
-        fizz.removeChild(fizz.firstChild);
-    }
+    let container = document.getElementById('container');
+    let buzzClass = document.getElementsByClassName('buzzClass');
+    let fizzbuzzClass = document.getElementsByClassName('fizzbuzzClass');
+    let myDivs = document.getElementsByClassName('myDivs');
 
-    // function finalFizz() {
-    // let finFizz = document.getElementById('container');
-    // let fFizz = document.getElementsByClassName('fizzClass');
-    // fFizz.appendChild(finFizz);
-    // console.log("making Fizz");
-    // }
+    // container.classList.remove("buzzClass", "fizzbuzzClass", "myDivs");
+    container.classList.remove("buzzClass");
+    container.classList.remove("fizzbuzzClass");
+    container.classList.remove("myDivs");
+
+    // buzzClass.classList.add("hidden");
+    // fizzbuzzClass.classList.add("hidden");
+    // myDivs.classList.add("hidden");
+
 }
 
 function btnRefresh() {
