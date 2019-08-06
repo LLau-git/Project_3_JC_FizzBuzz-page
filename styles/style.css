@@ -46,7 +46,6 @@ button:hover {
 #container{
     display: grid;
     grid-template-columns: 1fr;
-    /* display: inline-block; */
     min-width: 320px;
     max-width: 425px;
     align-content: center;
