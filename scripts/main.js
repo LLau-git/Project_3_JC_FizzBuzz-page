@@ -14,6 +14,7 @@ function main() {
         myDiv.innerText = i;
         myDiv.id = "myid"+i;
         myDiv.className = "myDivs";
+        myDiv.className += " numbers";
         
         if (i % 3 == 0) {
             console.log("Fizz");
@@ -47,9 +48,12 @@ function myFizz() {
         if (allDivs[i].className != 'fizzClass') {
             allDivs[i].setAttribute('class', 'hidden')
         }
-    };
+    }
+};
     
-function myBuzz() {    
+function myBuzz() {  
+    const container = document.getElementById('container');
+    let allDivs = container.getElementsByTagName('div');  
     
     for (let i = 0; i < allDivs.length; i++) {
         if (allDivs[i].className != 'buzzClass') {
@@ -58,8 +62,10 @@ function myBuzz() {
     }
 };
 
-function myFizzBuzz() {
-    
+function myFizzbuzz() {
+    const container = document.getElementById('container');
+    let allDivs = container.getElementsByTagName('div');
+
     for (let i = 0; i < allDivs.length; i++) {
         if (allDivs[i].className != 'fizzbuzzClass') {
             allDivs[i].setAttribute('class', 'hidden')
