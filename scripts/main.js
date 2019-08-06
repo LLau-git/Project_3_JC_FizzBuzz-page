@@ -1,8 +1,12 @@
-const btnRef = document.getElementById("btnRefresh"); 
+// const btnRef = document.getElementById("btnRefresh"); 
 
 
 
 function main() {
+
+    const fizzValue = document.getElementById('fizz_value').value;
+    const buzzValue = document.getElementById('buzz_value').value;
+
 
     console.log("Creating container");
 
@@ -16,18 +20,18 @@ function main() {
         myDiv.className = "myDivs";
         myDiv.className += " numbers";
         
-        if (i % 3 == 0) {
+        if (i % fizzValue == 0) {
             console.log("Fizz");
             myDiv.innerText += " Fizz";
             myDiv.className = "fizzClass"
             } 
-        if (i % 5 == 0) {
+        if (i % buzzValue == 0) {
             console.log("Buzz");
             myDiv.innerText += " Buzz";
             myDiv.className = "buzzClass"
             }
 
-        if (i % 15 == 0){
+        if (i % fizzValue == 0 && i % buzzValue == 0){
             console.log("FizzBuzz");
             myDiv.className = "fizzbuzzClass"
             } 

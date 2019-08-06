@@ -13,6 +13,17 @@
 <body>
     <header><h1>FIZZ BUZZ</h1>
     <div class="cont-menu">
+        <div class="control">
+            <label for="fizz_value">Fizz value(<em>int</em>)</label>
+            <input id="fizz_value" class="f_value" type="number" placeholder="Please enter Fizz value here" value="3" name="Fizz value">
+            <input id="buzz_value" class="b_value" type="number" placeholder="Please enter Buzz value here" value="5" name="Buzz value">
+        </div> 
+        <div class="control">
+            <label for="start_value">Start value(<em>int</em>)</label>
+            <input id="start_value" class="s_value" type="number" placeholder="Please enter start value here" value="1" name="Start value">
+            <input id="end_value" class="e_value" type="number" placeholder="Please enter end value here" value="100" name="end value">
+        </div>
+        <!-- <input id="myDiv_width" class="width" type="number" placeholder="enter myDiv value here" min="100" max="200" value="100" name="myDiv width"> -->
         <button onclick="myFizz()" id="btnFizz">FIZZ</button>
         <button onclick="myBuzz()" id="btnBuzz">BUZZ</button>
         <button onclick="myFizzbuzz()" id="btnFizzBuzz">FIZZ BUZZ</button>
