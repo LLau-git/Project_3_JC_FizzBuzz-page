@@ -10,6 +10,7 @@ html{
     color: rgb(11, 70, 70);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    /* margin: auto; */
 }
 h1{
     font-size: 2em;
@@ -44,7 +45,7 @@ button:hover {
 
 #container{
     display: grid;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     display: inline-block;
     /* min-width: 320px;
     max-width: 425px; */
@@ -93,12 +94,14 @@ button:hover {
     display: none;
 }
 @media (min-width: 576px) {
-    .container {
+    #container {
         grid-template-columns: repeat(5, 1fr);
     }
 }
-@median (min-width: 992px) {
-    .container {
-        grid-template-rows: repeat(10, 1fr);
+@media (min-width: 992px) {
+    #container {
+        /* grid-template-columns: repeat(10, 1fr); */
+        /* grid-template-rows: repeat(10, 1fr); */
+        grid-template-columns: 1fr, 1fr;
     }
 }
