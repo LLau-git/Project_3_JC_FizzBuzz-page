@@ -1,6 +1,7 @@
 const btnRef = document.getElementById("btnRefresh"); 
 
 
+
 function main() {
 
     console.log("Creating container");
@@ -13,7 +14,6 @@ function main() {
         myDiv.innerText = i;
         myDiv.id = "myid"+i;
         myDiv.className = "myDivs";
-        myDiv.className += " numbers";
         
         if (i % 3 == 0) {
             console.log("Fizz");
@@ -28,7 +28,6 @@ function main() {
 
         if (i % 15 == 0){
             console.log("FizzBuzz");
-            // myDiv.innerText += " FizzBuzz";
             myDiv.className = "fizzbuzzClass"
             } 
         
@@ -40,23 +39,33 @@ function main() {
 
 main();
 
-
 function myFizz() {
-    let container = document.getElementById('container');
-    let buzzClass = document.getElementsByClassName('buzzClass');
-    let fizzbuzzClass = document.getElementsByClassName('fizzbuzzClass');
-    let myDivs = document.getElementsByClassName('myDivs');
+    const container = document.getElementById('container');
+    let allDivs = container.getElementsByTagName('div');
+    
+    for (let i = 0; i < allDivs.length; i++) {
+        if (allDivs[i].className != 'fizzClass') {
+            allDivs[i].setAttribute('class', 'hidden')
+        }
+    };
+    
+function myBuzz() {    
+    
+    for (let i = 0; i < allDivs.length; i++) {
+        if (allDivs[i].className != 'buzzClass') {
+            allDivs[i].setAttribute('class', 'hidden')
+        }
+    }
+};
 
-    // container.classList.remove("buzzClass", "fizzbuzzClass", "myDivs");
-    container.classList.remove("buzzClass");
-    container.classList.remove("fizzbuzzClass");
-    container.classList.remove("myDivs");
-
-    // buzzClass.classList.add("hidden");
-    // fizzbuzzClass.classList.add("hidden");
-    // myDivs.classList.add("hidden");
-
-}
+function myFizzBuzz() {
+    
+    for (let i = 0; i < allDivs.length; i++) {
+        if (allDivs[i].className != 'fizzbuzzClass') {
+            allDivs[i].setAttribute('class', 'hidden')
+        }
+    }
+};
 
 function btnRefresh() {
     let fizz = document.getElementById('container');
@@ -64,9 +73,4 @@ function btnRefresh() {
         fizz.removeChild(fizz.firstChild);
 }
 main();
-}
-
-
-
-    
-
+};
