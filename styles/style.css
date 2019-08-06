@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html{
     /* image from unsplash.com author Paweł Czerwiński */
     background: center no-repeat url(https://images.unsplash.com/photo-1559762717-99c81ac85459?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
@@ -5,50 +9,74 @@ html{
     background-attachment: fixed;
     color: rgb(11, 70, 70);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 h1{
-    text-align: center;
-    font-size: 5em;
+    font-size: 2em;
 }
 
 .control {
-    text-align: center;
+    display: inline-block;
+    width: 150px;
 }
-.cont-menu{
+
+.buttons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+button {
+    width: 10em;
+    background-color: rgb(15, 133, 211);
+    height: 2em;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: rgb(13, 147, 201);
+    transform: scale(1.1);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr;
+    display: inline-block;
+    /* min-width: 320px;
+    max-width: 425px; */
+    width: auto;
     margin: 0.5em;
     padding: 0.5em;
 }
 
-#container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0.5em;
-    padding: 1em;
-}
+/* should respond to resizing browser window (for example 1 column 100 rows on small mobile, 5x20 on tablet, and 10x10 on large HD screen). */
 .myDivs{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: lightyellow;
     border: 2px solid rgb(229, 248, 118);
     padding: 0.5em;
     margin: 0.3em;
 }
 .fizzClass, .buzzClass, .fizzbuzzClass, .otherClass{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: 2px solid rgb(229, 248, 118);
     padding: 0.5em;
     margin: 0.3em;
     display: flex;
-    /* transform: scale(1.5); */
-
+    flex-wrap: wrap;
+    display: block;
+    transition: ease-in-out;
 }
 
+.fizzClass:hover, .buzzClass:hover, .fizzbuzzClass:hover, .myDivs:hover {
+ transform: scale(1.1);
+}
 .fizzClass{
     background: rgb(243, 160, 127);  
 }
@@ -60,10 +88,17 @@ h1{
 .fizzbuzzClass{
     background: rgb(222, 233, 121);
 }
-.otherClass{
-    background: lightgoldenrodyellow;
-}
 
 .hidden {
     display: none;
+}
+@media (min-width: 576px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@median (min-width: 992px) {
+    .container {
+        grid-template-rows: repeat(10, 1fr);
+    }
 }
