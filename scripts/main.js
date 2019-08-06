@@ -1,4 +1,3 @@
-// const btnRef = document.getElementById("btnRefresh"); 
 
 
 
@@ -6,14 +5,15 @@ function main() {
 
     const fizzValue = document.getElementById('fizz_value').value;
     const buzzValue = document.getElementById('buzz_value').value;
-
-
+    let startValue = parseInt(document.getElementById('start_value').value);
+    let endValue = parseInt(document.getElementById('end_value').value);
+    
     console.log("Creating container");
 
     const main = document.getElementById('container');
 
-
-    for (let i=1; i<= 100; i++) {
+    // for (let i=1; i<= 100; i++) 
+    for (let i = startValue; i<= endValue; i++) {
         let myDiv = document.createElement("div");
         myDiv.innerText = i;
         myDiv.id = "myid"+i;
