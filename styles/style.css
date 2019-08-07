@@ -1,5 +1,29 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
 }
 
 html{
@@ -16,27 +40,39 @@ h1{
     font-size: 2em;
 }
 
+.cont-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .control {
-    display: inline-block;
-    width: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .buttons {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    display: inline-block;
-    text-align: center;
-    width: 150px;
-    margin: 0.5em;
-    padding: 0.5em;
+    margin: 20px 0;
 }
 button {
-    width: 10em;
+    width: 100px;
     background-color: rgb(15, 133, 211);
-    height: 2em;
+    height: 25px;
     border-radius: 20px;
     transition: 0.2s;
+    align-self: center;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    align-self: center;
 }
 button:hover {
     background-color: rgb(13, 147, 201);
@@ -46,13 +82,6 @@ button:hover {
 #container{
     display: grid;
     grid-template-columns: 1fr;
-    min-width: 320px;
-    max-width: 425px;
-    align-content: center;
-    justify-items: center;
-    width: auto;
-    margin: 0.5em;
-    padding: 0.5em;
 }
 
 /* should respond to resizing browser window (for example 1 column 100 rows on small mobile, 5x20 on tablet, and 10x10 on large HD screen). */
@@ -103,6 +132,22 @@ button:hover {
     #container {
         grid-template-columns: repeat(10, 1fr);
     }
+    header {
+        margin-bottom: 20px;
+    }
     .cont-menu {
+        flex-direction: row;
+    }
+    .control {
+        width: fit-content;
+        margin-right: 20px;
+    }
+    .buttons {
+        width: fit-content;
+        flex-direction: column;
+        margin: 0;
+    }
+    #container{
+        width: 90%;
     }
 }
